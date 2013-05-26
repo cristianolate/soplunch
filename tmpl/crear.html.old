@@ -1,0 +1,28 @@
+<html>
+	<body>
+		<form method="post">
+		<table>
+			<tr>
+				<td>Comensales</td>
+				<td><input type="text" name="comensales" /></td>
+			</tr>
+			<tr>
+				<td>Entradas</td>
+				<td><input type="text" name="entradas" /></td>
+			</tr>
+			<tr>
+				<td>Fondos</td>
+				<td><input type="text" name="fondos" /></td>
+			</tr>
+			<tr>
+				<td>Agregados</td>
+				<td><input type="text" name="agregados" /></td>
+			</tr>
+			<tr>
+				<td>Entradas</td>
+				<td clspan="2"><input type="submit" value="OK" /></td>
+			</tr>
+		</table>
+		</form>
+	</body>
+<html>

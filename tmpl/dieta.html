@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+	{% block content %}
+		<h1>Resumen de elecciones de {{ usuario }}</h1>
+		<table>
+			<tr>
+				<td class="titulo">Fecha</td>
+				<td class="titulo">Entrada</td>
+				<td class="titulo">Fondo</td>
+				<td class="titulo">Agregado</td>
+			</tr>
+			{% for eleccion in elecciones %}
+			<tr>
+				<td class="dato">{{ eleccion.fecha }}</td>
+				<td class="dato">{{ eleccion.entrada }}</td>
+				<td class="dato">{{ eleccion.fondo }}</td>
+				<td class="dato">{{ eleccion.agregado }}</td>
+			</tr>
+			{% endfor %}
+		<table>
+		<table>
+			<tr>
+				<td>
+					<a href="#" onclick="Effect.toggle('chart_entradas', 'appear');">Gr&aacute;fico de entradas</a>
+					<img src="http://chart.apis.google.com/chart?cht=p3&chd=t:{{ chart_entradas_valor }}&chs=500x200&chl={{ chart_entradas_etiqueta }}&chtt=Entradas" alt="Grafico de entradas" style="border:1px solid #666666; display:none;" id="chart_entradas" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#" onclick="Effect.toggle('chart_fondos', 'appear');">Gr&aacute;fico de fondos</a>
+					<img src="http://chart.apis.google.com/chart?cht=p3&chd=t:{{ chart_fondos_valor }}&chs=500x200&chl={{ chart_fondos_etiqueta }}&chtt=Fondos" alt="Grafico de entradas" style="border:1px solid #666666; display:none;" id="chart_fondos" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#" onclick="Effect.toggle('chart_agregados', 'appear');">Gr&aacute;fico de agregados</a>
+					<img src="http://chart.apis.google.com/chart?cht=p3&chd=t:{{ chart_agregados_valor }}&chs=500x200&chl={{ chart_agregados_etiqueta }}&chtt=Agregados" alt="Grafico de entradas" style="border:1px solid #666666; display:none;" id="chart_agregados"  />
+				</td>
+			</tr>
+		</table>
+	{% endblock %}

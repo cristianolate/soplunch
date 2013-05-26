@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block jscript %}
+<script type="text/javascript">
+	window.onload = function() {
+		new Autocompleter.Local('comensales', 'listaComensales',
+								{{ comensales }},
+								{ignoreCase:true, tokens:','});
+
+		new Autocompleter.Local('entradas', 'listaEntradas',
+								{{ entradas }},
+								{ignoreCase:true, tokens:','});
+
+		new Autocompleter.Local('fondos', 'listaFondos',
+								{{ fondos }},
+								{ignoreCase:true, tokens:','});
+
+		new Autocompleter.Local('agregados', 'listaAgregados',
+								{{ agregados }},
+								{ignoreCase:true, tokens:','});
+	}
+</script>
+{% endblock %}
+
+	{% block content %}
+		<h1>Men&uacute; del {{ dia }}</h1>
+		<form method="post">
+		<table>
+			<tr>
+				<td class="campo">Comensales</td>
+			</tr>
+			<tr>
+				<td class="caja">
+					<textarea name="comensales" id="comensales" class="input" rows="4"></textarea>
+					<div class="autocompletar" id="listaComensales"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="campo">Entradas</td>
+			</tr>
+			<tr>
+				<td class="caja">
+					<textarea name="entradas" id="entradas" class="input" rows="2"></textarea>
+					<div class="autocompletar" id="listaEntradas"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="campo">Fondos</td>
+			</tr>
+			<tr>
+				<td class="caja">
+					<textarea name="fondos" id="fondos" class="input" rows="2"></textarea>
+					<div class="autocompletar" id="listaFondos"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="campo">Agregados</td>
+			</tr>
+			<tr>
+				<td class="caja">
+					<textarea name="agregados" id="agregados" class="input" rows="2"></textarea>
+					<div class="autocompletar" id="listaAgregados"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="boton">
+					<input type="submit" value="Crear menu" class="boton_ok" />
+				</td>
+			</tr>
+		<table>
+		</form>
+	{% endblock %}

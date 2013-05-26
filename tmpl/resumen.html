@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+	{% block content %}
+		<h1>Resumen de elecciones del {{ dia }}</h1>
+		<table>
+			<tr>
+				<td class="titulo">Comensal</td>
+				<td class="titulo">Entrada</td>
+				<td class="titulo">Fondo</td>
+				<td class="titulo">Agregado</td>
+			</tr>
+			{% for eleccion in elecciones %}
+			<tr>
+				<td class="dato">{{ eleccion.usuario }}</td>
+				<td class="dato">{{ eleccion.entrada }}</td>
+				<td class="dato">{{ eleccion.fondo }}</td>
+				<td class="dato">{{ eleccion.agregado }}</td>
+			<tr>
+			{% endfor %}
+			<tr>
+				<td><b>Resumen</b></td>
+				<td style="border: 1px solid #999999;">{{ msg_entradas }}</td>
+				<td colspan="2" style="border: 1px solid #999999;">{{ msg_fondos }}</td>
+			</tr>
+		<table>
+		</form>
+	{% endblock %}

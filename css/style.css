@@ -1,0 +1,125 @@
+body
+{
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	background-color: #ededff;
+	/*background-image: url('/img/bg.jpg');
+	background-repeat: no-repeat;*/
+}
+
+a
+{
+	text-decoration: none;
+	color: #0000ff;
+}
+
+a:hover
+{
+	text-decoration: none;
+	color: #ff0000;
+}
+
+h1
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+ul
+{
+	list-style-type: none;
+	padding-left: 15px;
+}
+
+li:hover
+{
+	background-color: #ffffff;
+}
+
+.lheader
+{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 50%;
+	font-size: 12px;
+	text-align: left;
+}
+
+.rheader
+{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 50%;
+	font-size: 12px;
+	text-align: right;
+}
+
+#main
+{
+	width: 470px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+.footer
+{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+}
+
+.input
+{
+	width: 450px;
+	padding: 5px 5px 5px 5px;
+	font-size: 12px;
+	filter:alpha(opacity=75);
+	-moz-opacity:0.75;
+	-khtml-opacity: 0.75;
+	opacity: 0.75;
+}
+
+.campo
+{
+	padding-top: 20px;
+}
+
+.boton
+{
+	text-align: right;
+}
+
+.autocompletar
+{
+	width: 450px;
+	z-index: 2;
+	background-color: #dddddd;
+	border: 1px solid #999999;
+}
+
+.titulo
+{
+	padding-top: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	width: 150px;
+}
+
+.dato
+{
+	padding: 5px 5px 5px 5px;
+	font-size: 12px;
+}
+
+.anuncio
+{
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+}

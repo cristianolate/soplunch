@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{% block title %}SopLunch{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="SopLunch: escogiendo el menu en Soporta Ltda." />
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/scriptaculous.js?load=effects,controls"></script>
+<link rel="stylesheet" href="/css/style.css" type="text/css" />
+{% block jscript %}
+<!-- Para codigo javascript extra -->
+{% endblock%}
+</head>
+<body>
+	<!-- Encabezado superior derecho -->
+	<div class="rheader">
+	{% block rheader %}
+		{{ usuario }} | <a href="{{ url_salir }}">Salir</a>
+	{% endblock %}
+	</div>
+
+	<!-- Encabezado superior izquierdo -->
+	<div class="lheader">
+	{% block lheader %}
+		<a href="menu">Crear men&uacute; del d&iacute;a</a> | 
+		<a href="pedido">Escoger plato del d&iacute;a</a> | 
+		<a href="resumen">Revisar elecciones</a> | 
+		<a href="midieta">Mis elecciones</a> 
+	{% endblock %}
+	</div>
+
+	<!-- Contenido principal -->
+	<div class="main" id="main">
+		<!-- Busquedas -->
+		<div class="busquedas">
+			<form action="http://www.google.com/cse" id="cse-search-box" target="_blank">
+				<div>
+					<input type="hidden" name="cx" value="partner-pub-4645849865332065:ay10bu-ysrr" />
+					<input type="hidden" name="ie" value="ISO-8859-1" />
+					<input type="text" name="q" size="45" />
+					<input type="submit" name="sa" value="Buscar" />
+				</div>
+			</form>
+			<script type="text/javascript" 
+			src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=es"></script>
+		</div>
+	{% block content %}
+		<h1>Esto es SopLunch</h1>
+	{% endblock %}
+	</div>
+
+	<!-- Pie de pagina -->
+	<div class="footer">
+	{% block footer %}
+		<img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif"
+		alt="Con la tecnología de Google App Engine" />
+	{% endblock %}
+	</div>
+	
+	{% block ads %}
+	<!-- Aca un avisito -->
+	{% endblock %}
+</body>
+</html>
+

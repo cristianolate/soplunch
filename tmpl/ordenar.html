@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+	{% block content %}
+		<h1>Ordenar almuerzo para el {{ dia }}</h1>
+		<form method="post">
+		<table>
+			<tr>
+				<td class="campo">Comensal</td>
+			</tr>
+			<tr>
+				<td class="campo">
+					<b>{{ comensal }}</b>
+				</td>
+			</tr>
+			<tr>
+				<td class="campo">Entrada</td>
+			</tr>
+			<tr>
+				<td class="caja">
+					<select name="entrada" class="input">
+					{% for entrada in entradas %}
+						<option value="{{ entrada }}">{{ entrada }}</option>
+					{% endfor%}
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="campo">Fondo</td>
+			</tr>
+			<tr>
+				<td class="caja">
+					<select name="fondo" class="input">
+					{% for fondo in fondos %}
+						<option value="{{ fondo }}">{{ fondo }}</option>
+					{% endfor%}
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="campo">Agregado</td>
+			</tr>
+			<tr>
+				<td class="caja">
+					<select name="agregado" class="input">
+					{% for agregado in agregados %}
+						<option value="{{ agregado }}">{{ agregado }}</option>
+					{% endfor%}
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="boton">
+					<input type="submit" value="Enviar mi elecci&oacute;n" class="boton_ok" />
+				</td>
+			</tr>
+		<table>
+		</form>
+	{% endblock %}

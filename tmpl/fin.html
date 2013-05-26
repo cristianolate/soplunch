@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>SopLunch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="SopLunch: escogiendo el menu en Soporta Ltda." />
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/scriptaculous.js?load=effects,controls"></script>
+<link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+<body>
+	<div class="rheader">
+		{{ usuario }} | <a href="{{ url_salir }}">Salir</a>
+	</div>
+	<div class="lheader">
+		<a href="menu">Crear men&uacute; del d&iacute;a</a> | 
+		<a href="pedido">Escoger plato del d&iacute;a</a> | 
+		<a href="resumen">Revisar elecciones</a> | 
+		<a href="midieta">Mis elecciones</a>
+	</div>
+	<div class="footer">
+		<img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif"
+		alt="Con la tecnología de Google App Engine" /> <br/>
+		Soporta Ltda.
+	</div>
+	<div class="main" id="main" style="height: 600px;">
+		<h1 style="padding-top: 200px;">{{ the_message }}</h1>
+		<div class="anuncio">
+			<script type="text/javascript"><!--
+			google_ad_client = "pub-4645849865332065";
+			/* 300x250, creado 13/08/10 */
+			google_ad_slot = "1184960892";
+			google_ad_width = 300;
+			google_ad_height = 250;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div>
+	</div>
+</body>
+</html>
+
